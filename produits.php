@@ -53,21 +53,29 @@
 								</div>
 							</div>
 						</div>
+						<?php 
+require_once("classes/Produits.php");
+          $cat = new Produits();	
+          $liste = $cat->liste();
+          foreach($liste as $data )
+          {
 
+           ?>
 						<div class="col-sm-4">
+
 							<div class="product-image-wrapper">
 								<div class="single-products">
 									<div class="productinfo text-center">
-										<img src="images/bakery.jpg" alt="" />
-										<h2>999 TND</h2>
-										<p>%NOM PRODUIT%</p>
+										<img src="upload/<?php echo $data->_image ?>" alt="" />
+										<h2><?php echo $data->_prix ?> TND</h2>
+										<p><?php echo $data->_libelle ?></p>
 										<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>
 											Ajouter au panier
 										</a>
 									</div>
 									<div class="product-overlay">
 										<div class="overlay-content">
-											<p>%DESCRIPTION PRODUIT ... DESCRIPTION PRODUIT ... DESCRIPTION PRODUIT ... DESCRIPTION PRODUIT ... DESCRIPTION PRODUIT ... DESCRIPTION PRODUIT ... %</p>
+											<p><?php echo $data->_description ?></p>
 											<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>
 												Ajouter au panier
 											</a>
@@ -77,7 +85,7 @@
 								</div>
 							</div>
 						</div>
-
+						<?php  } ?>
 						
 					</div><!--features_items-->
 					

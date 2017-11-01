@@ -47,7 +47,7 @@ require_once("classes/Categorie.php");
 							<div class="single-products">
 									<div class="productinfo text-center">
 										<img src="upload/<?php echo $data->_image ?>" alt="" />
-										<a href="produits.php" class="btn btn-default add-to-cart"> <?php echo $data->_libelle ?></a>
+										<a href="Produits.php" class="btn btn-default add-to-cart"> <?php echo $data->_libelle ?></a>
 									</div>
 							</div>
 						</div>

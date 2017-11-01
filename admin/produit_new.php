@@ -5,7 +5,7 @@ require_once('verifier_access.php');
 
 if( !empty($id) ) {
 	require_once("../classes/Produits.php");
-	$cat= new Categorie();
+	$cat= new Produits();
 	$cat = $cat->details($id);
 }
 ?>

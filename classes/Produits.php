@@ -31,7 +31,7 @@ class Produits extends Mysql
 		$q = "SELECT * FROM produit WHERE id ='$id'";
 		$res = $this->requete($q);
 		$row = mysqli_fetch_array( $res); 
-		$cat = new produit();
+		$cat = new Produits();
 		
 		$cat->_id 			= $row['id'];
         $cat->_libelle 		= $row['libelle'];
@@ -50,7 +50,7 @@ class Produits extends Mysql
 		$list_cat = array(); // Tableau VIDE
 		$res = $this->requete($q);
 		while($row = mysqli_fetch_array( $res)){
-			$cat = new produit();
+			$cat = new Produits();
 
 			$cat->_id 			= $row['id'];
             $cat->_libelle 		= $row['libelle'];
